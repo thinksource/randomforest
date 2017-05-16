@@ -11,7 +11,7 @@ from sqlalchemy import create_engine
 
 path1 = 'table1.csv'
 path2 = 'table2.csv'
-#dbconnector='mysql+mysqlconnector://root:root@localhost/randomforst'
+dbconnector='mysql+mysqlconnector://root:root@localhost/randomforst'
 
 def datatype(s):
     it={'H':0,'L':1,'N':2}
@@ -25,7 +25,7 @@ def getdataframe():
     df=pd.merge(df2,df1, right_index=True,left_index=True)
     #
     #here is database write, if you want to speed up please delete the line below
-    #df.to_sql("sample",engine,if_exists='replace')
+    df.to_sql("sample",engine,if_exists='replace')
     return df
 
 def trainmodel(data, target,model):
