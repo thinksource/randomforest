@@ -25,6 +25,9 @@ From command-line:
 ```
 python app.py
 ```
+### Make sure give correct fold for templates
+
+if your app have error with temples loads please check the template path.
 
 ## Answer:
 
