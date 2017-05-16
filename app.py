@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+
 from flask import Flask, current_app
 from flask import request
 from flask import render_template
