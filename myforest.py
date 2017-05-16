@@ -2,8 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib as mpl
+
 import numpy.lib.recfunctions as rfn
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -13,7 +12,7 @@ from sqlalchemy import create_engine
 path1 = 'table1.csv'
 path2 = 'table2.csv'
 dbconnector='mysql+mysqlconnector://root:root@localhost/randomforst'
-iris_feature = u'VAR4', u'VAR5', u'VAR6', u'VAR7'
+
 def datatype(s):
     it={'H':0,'L':1,'N':2}
     return it[s.strip()]
@@ -24,6 +23,8 @@ def getdataframe():
     df1=pd.read_csv(path1, index_col='ID')
     df2=pd.read_csv(path2, index_col='ID',converters={1: datatype, 2:datatype,3:datatype,4:datatype,5:datatype,6:datatype,7:datatype})
     df=pd.merge(df2,df1, right_index=True,left_index=True)
+    #
+    #here is database write, if you want to speed up please delete the line below
     df.to_sql("sample",engine,if_exists='replace')
     return df
 

@@ -7,7 +7,6 @@ import numpy as np
 import os
 basedir = os.path.join(os.path.dirname(os.path.abspath(".")),"randomforest")
 
-
 app = Flask(__name__, template_folder=os.path.join(basedir, 'templates'))
 with app.app_context():
     # within this block, current_app points to app.
