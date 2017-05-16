@@ -24,7 +24,7 @@ From command-line:
 python app.py
 ```
 
-## Questions:
+## Answer:
 
 ### Question 1: Briefly explain how would you develop this workflow using AWS if tables 1 and 2 had over 1 mill records and over 500 columns. How would this higher dimension impact the design of the Web app?
 if table 1 and table 2 have mill records I will do:
