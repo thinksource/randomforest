@@ -5,9 +5,11 @@
 ### 1, Intstall a database
 Install a database (I use mariadb which is the same as mysql) and then change database connection string.
 
-The database connection string is in myforest.py change dbconnector='mysql+mysqlconnector://root:root@localhost/randomforst'
+The database connection string is in myforest.py change
+```
+dbconnector='mysql+mysqlconnector://root:root@localhost/randomforst'
  string.
-
+```
 ### 2, Install requirements
 pip install sklearn numpy SQLAlchemy Flask pandas
 
