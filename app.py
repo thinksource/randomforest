@@ -42,6 +42,8 @@ def index():
         result=model.predict(var)
         prodict=model.predict_proba(var)
         return render_template("result.html", result=result, prodict="{0:.1f}%".format(prodict[0][0]*100))
+    else
+        return render_template('index.html')
 
 if __name__ == '__main__':
     df=getdataframe()
